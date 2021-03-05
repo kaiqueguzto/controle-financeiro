@@ -9,7 +9,6 @@
 body {
   background-color: #f7f7f7;
   font-family: Arial, Helvetica, sans-serif;
-
 }
 
 
@@ -117,23 +116,27 @@ main {
 .container main .transaction .transactions li .delete-btn {
   background: #c0392b;
   color: white;
+  padding: 2px 4px;
+
 }
 
 .container main .transaction .transactions li .edit-btn {
   background: #e4f549;
+  position: relative;
+  top: 1px;
   color: #000;
+  padding: 1px 2px;
 }
 
 .container main .transaction .transactions li .btn-box {
   position: absolute;
-  left: -12%;
+  left: -13%;
   opacity: 0;
 }
 
 .container main .transaction .transactions li:hover .btn-box .btn {
   border: none;
   cursor: pointer;
-  padding: 2px 4px;
 
 }
 .container main .transaction .transactions li:hover .btn-box {
@@ -288,3 +291,26 @@ main {
   filter: brightness(90%);
 }
 
+
+@media (max-width: 438px) {
+  .container main .transaction .transactions li .btn-box {
+    position: unset;
+    opacity: 1;
+ 
+  }
+
+  .container main .transaction .transactions li .edit-btn {
+    background: #e4f549;
+    color: #000;
+    position: relative;
+    border: none;
+    padding: 2px 1px;
+  }
+
+  .container main .transaction .transactions li .delete-btn {
+    background: #c0392b;
+    color: white;
+    padding: 2px 5px;
+    border: none;
+  }
+}

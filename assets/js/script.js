@@ -19,7 +19,7 @@ const nameUpdateTransactionDOOM = document.querySelector(".name-update-transacti
 
 const localStorageTransactions = JSON.parse(localStorage.getItem('transactions'));
 let transactions = localStorage
-.getItem('transactions') !== null ? localStorageTransactions : []
+.getItem('transactions') !== null ? localStorageTransactions : [];
 
 const modalDOOM = document.querySelector(".modal");
 
@@ -51,7 +51,7 @@ const addTransactionIntDOOM = ({ id, amount, name }) => {
   li.innerHTML += `
   ${name} <span>${operator} R$ ${Math.abs(amount.toFixed(2))}</span>
   <div class="btn-box">
-    <button class="btn delete-btn" onClick="removeTransaction(${id})">X</button>
+    <button class="btn delete-btn" onClick="removeTransaction(${id})"> X </button>
     <button class="btn edit-btn" onClick="modal.open(${id})">🖊</button>
   </div>
   
@@ -154,19 +154,21 @@ const validateErrorUpdate = () => {
     return;
     
   } else {
-    nameTransactionDOOM.innerHTML = "";
+    nameUpdateTransactionDOOM.innerHTML = "";
   }
   
   if (inputValue.trim().length <=0) {
     viewMessageErrorUpdate("Preencha o campo Números", "number");
     return;
+  } else {
+    valueUpdateTransactionDOOM.innerHTML = "";
   }
   
   if (!Number(inputValue)) {
     viewMessageErrorUpdate("Somente Números", "number");
     return;
   } else {
-    valueTransactionDOOM.innerHTML = "";
+    valueUpdateTransactionDOOM.innerHTML = "";
   }
   
   inputTransactionName.value = '';
