@@ -9,7 +9,6 @@
   <link rel="icon" href="https://www.flaticon.com/svg/vstatic/svg/16/16302.svg?token=exp=1614939441~hmac=e0c71885342677f28d88739b77c9f68c">
 </head>
 <body>
-  <img src="" alt="">
 
   <div class="container">
 
@@ -62,10 +61,28 @@
       
     </main>
 
+    <div class="modal">
+      <div class="update-transaction">
+        <span onclick="modal.close()">X</span>
+        <h4>Editar transação</h4>
+        <form class="form-update">
+          <label >Nome</label>
+          <input type="text" id="input-name-update" placeholder="Nome da transacao">
+          <div class="name-update-transaction"></div>
 
+          <label>Valor</label>
+          <input type="text" id="input-value-update" placeholder="Valor da transacao">
+          <div class="value-update-transaction"></div>
+          <strong class="alert">Use (-) para despesas</strong>
+
+          <button class="btn-update">Salvar</button>
+        </form>
+    </div>
+  
   </div>
 
-  <script src="/assets/js/script.js"></script>
+
+  <script  src="/assets/js/script.js"></script>
 
   
 </body>

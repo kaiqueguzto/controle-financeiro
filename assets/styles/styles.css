@@ -14,10 +14,14 @@ body {
 
 
 .container {
-  min-height: 100vh;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+
+  position: relative;
+  min-height: 100vh;
+  
 }
 
 main {
@@ -111,21 +115,28 @@ main {
 }
 
 .container main .transaction .transactions li .delete-btn {
-  position: absolute;
-  left: -18px;
-  padding: 2px 4px;
-
-  border: none;
   background: #c0392b;
-  cursor: pointer;
   color: white;
+}
+
+.container main .transaction .transactions li .edit-btn {
+  background: #e4f549;
+  color: #000;
+}
+
+.container main .transaction .transactions li .btn-box {
+  position: absolute;
+  left: -12%;
   opacity: 0;
 }
 
-.container main .transaction .transactions li:hover .delete-btn {
-  opacity: 1;
+.container main .transaction .transactions li:hover .btn-box .btn {
+  border: none;
+  cursor: pointer;
+  padding: 2px 4px;
+
 }
-.container main .transaction .transactions li .delete-btn:hover {
+.container main .transaction .transactions li:hover .btn-box {
   opacity: 1;
 }
 
@@ -149,7 +160,7 @@ main {
   display: flex;
   flex-direction: column;
 }
-.container main .add-transaction form .alert {
+.alert {
   font-size: 13px;
   color: rgb(77, 77, 77);
 }
@@ -188,10 +199,92 @@ main {
   filter: brightness(90%);
 }
 
-
-.container main .add-transaction form .error {
+.error {
   font-size: 13px;
   color: #333;
   margin: 4px 0px;
   color: #c0392b;
 }
+
+.modal {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.active {
+  display: flex;
+}
+
+.update-transaction {
+  max-width: 350px;
+  width: 350px;
+  border-radius: 4px;
+  
+  
+  background: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  padding: 15px;
+  position: relative;
+}
+
+.update-transaction span {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 5px 10px;
+
+  cursor: pointer;
+}
+
+.update-transaction h4 {
+  text-align: center;
+  font-size: 19px;
+}
+
+.update-transaction form {
+  display: flex;
+  flex-direction: column;
+}
+
+.update-transaction form  input {
+  border: none;
+  padding: 8px;
+  border:1px solid #DDD;
+  width: 100%;
+}
+
+.update-transaction form  label {
+  font-size: 15px;
+  color: #333;
+  margin: 12px 0px 4px 0px;
+}
+
+.update-transaction form strong {
+  font-size: 12px;
+  color: rgb(77, 77, 77);
+  font-weight: normal;
+}
+
+.update-transaction form button {
+  margin-top: 14px;
+  padding: 10px;
+
+  cursor: pointer;
+  font-size: 14px;
+  
+  border: none;
+  background: #9c88ff;
+  color: white;
+  transition: all 300ms;
+}
+
+.update-transaction form button:hover {
+  filter: brightness(90%);
+}
+
