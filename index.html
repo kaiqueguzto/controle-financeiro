@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Controle financeiro</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="https://www.flaticon.com/svg/vstatic/svg/16/16302.svg?token=exp=1614939441~hmac=e0c71885342677f28d88739b77c9f68c">
+</head>
+<body>
+  <img src="" alt="">
+  <div class="container">
+
+    <main>
+      <h2>Controle de finanças</h2>
+      
+      <div class="total">
+        <h4 id="total">Saldo atual</h4>
+        <strong id="total-value">R$ 0.00</strong>
+      </div>
+    
+      <div class="inc-exp-container">
+
+        <div class="inc">
+          <span>receitas</span>
+          <p id="revenues" class="value green">R$ 0.00</p>
+        </div>
+
+        <div class="inc">
+          <span>despesas</span>
+          <p id="expenditure" class="value red">R$ 0.00</p>
+        </div>
+
+      </div>
+
+      <div class="transaction">
+        <h4>Transações</h4>
+        <ul id="transactions" class="transactions">
+
+        </ul>
+
+        
+      </div>
+
+      <div class="add-transaction">
+        <h4>Adicionar transação</h4>
+        <form class="form">
+          <label for="">Nome</label>
+          <input id="name" type="text" placeholder="Nome da transacao">
+          <div class="name-transaction"></div>
+
+          <label for="">Valor</label>
+          <input id="value" type="text" placeholder="Valor da transacao">
+          <span class="alert">Use (-) para despesas</span>
+          <div class="value-transaction"></div>
+
+          <button>Adicionar</button>
+        </form>
+      </div>
+      
+    </main>
+
+
+  </div>
+
+  <script src="script.js"></script>
+
+  
+</body>
+</html>
