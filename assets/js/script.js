@@ -145,7 +145,6 @@ const validateErrorInsert = () => {
 }
 
 const validateErrorUpdate = () => {
-  console.log("cu")
   const inputName = inputTransactionUpdateName.value;
   const inputValue = inputTransactionUpdateValue.value;
   
